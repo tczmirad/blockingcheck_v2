@@ -1,10 +1,10 @@
 angular.module('app').controller('app_landing', app_landing);
-function app_landing($scope, app) {
+function app_landing($scope, app, $timeout) {
     'use strict';
     app.init($scope);
     $scope.search = function (){
-        
-        app.action('Landing', 'Submit', this);
+        $timeout(function() { app.action('Landing', 'Submit', this);}, 100);
+        //app.action('Landing', 'Submit', this);
         app.hideLoading();
     };
     $scope.reset = function () {
