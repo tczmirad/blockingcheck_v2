@@ -6,15 +6,6 @@ angular.module('app').config(function ($stateProvider) {
         templateProvider: function (app) {
             return app.templateProvider('app');
         }
-    }).state('app.blank', {
-        views: {
-            app: {
-                controller: 'app_blank',
-                templateProvider: function (app) {
-                    return app.templateProvider('app.blank');
-                }
-            }
-        }
     }).state('app.menu', {
         views: {
             app: {
@@ -30,6 +21,15 @@ angular.module('app').config(function ($stateProvider) {
                 controller: 'app_multiselect',
                 templateProvider: function (app) {
                     return app.templateProvider('app.multiselect');
+                }
+            }
+        }
+    }).state('app.landing', {
+        views: {
+            app: {
+                controller: 'app_landing',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.landing');
                 }
             }
         }

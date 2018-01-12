@@ -1,14 +1,8 @@
 {
   "id": "app",
-  "name": "blockingcheck_v2",
-  "startScreen": "app.blank",
+  "name": "blockingcheckmobile",
+  "startScreen": null,
   "screens": [
-    {
-      "id": "blank",
-      "name": "BLANK",
-      "sourceAppId": "_blank",
-      "sourceScreenId": "app.blank"
-    },
     {
       "id": "menu",
       "name": "menu",
@@ -20,6 +14,13 @@
       "name": "multiselect",
       "sourceAppId": "_blank",
       "sourceScreenId": "app.multiselect"
+    },
+    {
+      "id": "landing",
+      "name": "Landing",
+      "sourceScreenId": "app.barcode",
+      "sourceAppId": "Barcode",
+      "model": "Landing"
     }
   ],
   "sourceAppId": "_blank",

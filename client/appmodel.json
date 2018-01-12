@@ -1,1 +1,58 @@
-{}
+{
+  "Landing": {
+    "type": "object",
+    "properties": {
+      "SerialNumber": {
+        "type": "string",
+        "update": {
+          "type": "action",
+          "action": [
+            "BlurInput"
+          ]
+        }
+      },
+      "Status": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "Submit": {
+        "type": "action"
+      }
+    }
+  },
+  "resultok": {
+    "type": "object",
+    "comment": "Confirmation",
+    "properties": {}
+  },
+  "resultblocked": {
+    "type": "object",
+    "comment": "Confirmation",
+    "properties": {
+      "headlineText": {
+        "type": "string",
+        "label": "HeadlineText"
+      },
+      "detailText": {
+        "type": "string",
+        "label": "DetailText"
+      }
+    }
+  },
+  "resultpending": {
+    "type": "object",
+    "comment": "Confirmation",
+    "properties": {
+      "headlineText": {
+        "type": "string",
+        "label": "HeadlineText"
+      },
+      "detailText": {
+        "type": "string",
+        "label": "DetailText"
+      }
+    }
+  }
+}

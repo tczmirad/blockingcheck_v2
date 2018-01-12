@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "IsLanding": {
+      "type": "identifier",
+      "control": "exists",
+      "selector": "#MainContent_tbSerial"
+    },
+    "SerialNumber": {
+      "type": "string",
+      "selector": "#MainContent_tbSerial",
+      "control": "text"
+    },
+    "Status": {
+      "type": "string",
+      "selector": "#MainContent_lStatus",
+      "control": {
+        "fn": "function(node){var resultsArray=node.innerText.split(/(\\s+)/);if(resultsArray&&resultsArray.length){return resultsArray[resultsArray.length-1]}return ''}",
+        "control": "property"
+      }
+    },
+    "Submit": {
+      "type": "action",
+      "selector": "#MainContent_bCheck",
+      "control": "action.button"
+    }
+  },
+  "connect": [
+    {
+      "match": [
+        "IsLanding",
+        "IsLanding"
+      ],
+      "screens": [
+        "landing"
+      ]
+    }
+  ]
+}

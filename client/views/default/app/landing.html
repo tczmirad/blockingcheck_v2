@@ -1,0 +1,82 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-energized" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon ion-navicon" data-comp-id="button.1"></button>
+        </ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Blocking Check</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="" data-comp-id="ionic-content.1">
+        <!--Form Contents-->
+        <div data-comp-id="div.1" style="margin: 10% 10% 2%;">
+            <label class="item item-input" data-comp-id="textInput.1">
+                <span class="input-label" style="font-size: 14px; padding-right: 10px">Serial number</span>
+                <input ng-model="data.SerialNumber" style="font-size: 22px" type="text">
+            </label>
+            <button class="button icon-right button-energized button-block"
+                data-comp-id="button.2" ng-click="search()">
+                <i class="icon ion-search" data-comp-id="icon.1"
+                    style="font-size: 20px;  color: rgb(255, 255, 255);"></i>
+                Search</button>
+        </div>
+        <!--Form Contents-->
+        <div data-comp-id="div.2" ng-if="data.Status == 'BLOCKED'"
+            style="margin: 10% 10% 2%;">
+            <div class="row" data-comp-id="row.1" style="margin: 10px 0px;">
+                <div class="col text-center" data-comp-id="column.1" style="padding: 10px 0px;">
+                    <div class="assertive" data-comp-id="text.1"
+                        style="font-size: 34px; font-weight: bold;">BLOCKED</div>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.2" style="margin: 0px;">
+                <div class="col text-center" data-comp-id="column.2" style="padding: 20px;">
+                    <div data-comp-id="text.2">Unit is blocked</div>
+                </div>
+            </div>
+        </div>
+        <div data-comp-id="div.3" ng-if="data.Status == 'PENDING'"
+            style="margin: 10% 10% 2%;">
+            <div class="row" data-comp-id="row.3" style="margin: 10px 0px;">
+                <div class="col text-center" data-comp-id="column.3" style="padding: 10px 0px;">
+                    <div data-comp-id="text.3"
+                        style="font-size: 34px; font-weight: bold; color: #ff8000">PENDING</div>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.4" style="margin: 0px;">
+                <div class="col text-center" data-comp-id="column.4" style="padding: 20px;">
+                    <div data-comp-id="text.4">Unit is pending for blocking</div>
+                </div>
+            </div>
+        </div>
+        <div data-comp-id="div.4" ng-if="data.Status == 'OK'"
+            style="margin: 10% 10% 2%;">
+            <div class="row" data-comp-id="row.5" style="margin: 10px 0px;">
+                <div class="col text-center" data-comp-id="column.5" style="padding: 10px 0px;">
+                    <div class="balanced" data-comp-id="text.5"
+                        style="font-size: 34px; font-weight: bold;">OK</div>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.6" style="margin: 0px;">
+                <div class="col text-center" data-comp-id="column.6" style="padding: 20px;">
+                    <div data-comp-id="text.6">Unit is OK</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
+        dynamic-floating-footer="">
+        <div class="row" data-comp-id="row.7" style="padding: 0px;">
+            <div class="col" data-comp-id="column.7" style="padding: 0px;"></div>
+            <div class="col text-center" data-comp-id="column.8" ng-click="scan()"
+                style="padding: 0px;">
+                <div class="footer-button" data-comp-id="footerButton.1">
+                    <button class="button button-energized button-round button-shadowed">
+                        <i class="ion-qr-scanner" style="font-size: 24px"></i>
+                    </button>
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="col text-right" data-comp-id="column.9" style="padding: 0px;"></div>
+        </div>
+    </div>
+</ion-view>
