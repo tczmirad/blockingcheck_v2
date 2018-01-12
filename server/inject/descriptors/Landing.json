@@ -23,12 +23,29 @@
       "type": "action",
       "selector": "#MainContent_bCheck",
       "control": "action.button"
+    },
+    "IsOK": {
+      "type": "boolean",
+      "selector": "#MainContent_lStatus",
+      "control": "exists",
+      "selectContains": "OK"
+    },
+    "IsBlocked": {
+      "type": "boolean",
+      "selector": "#MainContent_lStatus",
+      "control": "exists",
+      "selectContains": "BLOCKED"
+    },
+    "IsPending": {
+      "type": "boolean",
+      "selector": "#MainContent_lStatus",
+      "control": "exists",
+      "selectContains": "BLOCK PENDING"
     }
   },
   "connect": [
     {
       "match": [
-        "IsLanding",
         "IsLanding"
       ],
       "screens": [
