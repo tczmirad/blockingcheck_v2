@@ -41,6 +41,14 @@
       "selector": "#MainContent_lStatus",
       "control": "exists",
       "selectContains": "BLOCK PENDING"
+    },
+    "Helper": {
+      "type": "string",
+      "selector": "body",
+      "control": {
+        "fn": "function(){return Math.random().toString(36).substring(7)}",
+        "control": "property"
+      }
     }
   },
   "connect": [
