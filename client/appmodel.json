@@ -19,6 +19,15 @@
       },
       "Submit": {
         "type": "action"
+      },
+      "IsOK": {
+        "type": "boolean"
+      },
+      "IsBlocked": {
+        "type": "boolean"
+      },
+      "IsPending": {
+        "type": "boolean"
       }
     }
   },
