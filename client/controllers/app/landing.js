@@ -3,7 +3,7 @@ function app_landing($scope, app) {
     'use strict';
     app.init($scope);
     $scope.search = function (){
-         app.hideLoading();
+        
         app.action('Landing', 'Submit', this);
         app.hideLoading();
     };
