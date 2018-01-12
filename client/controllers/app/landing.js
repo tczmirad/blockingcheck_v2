@@ -3,7 +3,7 @@ function app_landing($scope, app, $timeout) {
     'use strict';
     app.init($scope);
     $scope.search = function (){
-        $timeout(function() { app.action('Landing', 'Submit', this);}, 100);
+        //$timeout(function() { app.action('Landing', 'Submit', this);}, 100);
         //app.action('Landing', 'Submit', this);
         //app.hideLoading();
     };
